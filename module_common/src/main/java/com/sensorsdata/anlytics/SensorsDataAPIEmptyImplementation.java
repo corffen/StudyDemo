@@ -25,8 +25,6 @@ import android.webkit.WebView;
 import com.sensorsdata.anlytics.core.SAContextManager;
 import com.sensorsdata.anlytics.core.business.exposure.SAExposureData;
 import com.sensorsdata.anlytics.core.event.InputData;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeepLinkCallback;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
 import com.sensorsdata.anlytics.internal.beans.InternalConfigOptions;
 import com.sensorsdata.anlytics.listener.SAEventListener;
 import com.sensorsdata.anlytics.listener.SAFunctionListener;
@@ -541,16 +539,6 @@ public class SensorsDataAPIEmptyImplementation extends SensorsDataAPI {
 
     @Override
     public void unregisterPropertyPlugin(SAPropertyPlugin plugin) {
-
-    }
-
-    @Override
-    public void setDeepLinkCallback(SensorsDataDeepLinkCallback deepLinkCallback) {
-
-    }
-
-    @Override
-    public void setDeepLinkCompletion(SensorsDataDeferredDeepLinkCallback callback) {
 
     }
 

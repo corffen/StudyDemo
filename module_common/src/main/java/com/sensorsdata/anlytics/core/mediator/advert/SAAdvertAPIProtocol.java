@@ -17,9 +17,6 @@
 
 package com.sensorsdata.anlytics.core.mediator.advert;
 
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeepLinkCallback;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
-
 import org.json.JSONObject;
 
 public interface SAAdvertAPIProtocol {
@@ -114,20 +111,6 @@ public interface SAAdvertAPIProtocol {
      */
     void enableDeepLinkInstallSource(boolean enable);
 
-    /**
-     * 设置 DeepLink 接口回调
-     *
-     * @param deepLinkCallback DeepLink 接口回调
-     */
-    @Deprecated
-    void setDeepLinkCallback(SensorsDataDeepLinkCallback deepLinkCallback);
-
-    /**
-     * 设置 DeepLink 与 Deferred DeepLink接口回调
-     *
-     * @param deepLinkCallback DeepLink 与 Deferred DeepLink接口回调
-     */
-    void setDeepLinkCompletion(SensorsDataDeferredDeepLinkCallback deepLinkCallback);
 
     /**
      * 触发 DeferredDeeplink 请求

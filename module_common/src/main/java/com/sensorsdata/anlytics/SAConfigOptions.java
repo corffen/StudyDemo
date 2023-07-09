@@ -20,7 +20,6 @@ package com.sensorsdata.anlytics;
 import android.text.TextUtils;
 
 import com.sensorsdata.anlytics.core.business.exposure.SAExposureConfig;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
 import com.sensorsdata.anlytics.encrypt.IPersistentSecretKey;
 import com.sensorsdata.anlytics.encrypt.SAEncryptListener;
 import com.sensorsdata.anlytics.plugin.encrypt.StorePlugin;
@@ -537,16 +536,6 @@ public final class SAConfigOptions extends AbstractSAConfigOptions implements Cl
         return this;
     }
 
-    /**
-     * 设置 DeepLink 与 Deferred DeepLink接口回调
-     *
-     * @param callback DeepLink 与 Deferred DeepLink接口回调
-     * @return SAConfigOptions
-     */
-    public SAConfigOptions setDeepLinkCompletion(SensorsDataDeferredDeepLinkCallback callback) {
-        this.mDeeplinkCallback = callback;
-        return this;
-    }
 
     /**
      * 注册限制性属性 key

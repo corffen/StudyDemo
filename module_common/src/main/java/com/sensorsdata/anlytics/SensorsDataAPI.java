@@ -41,8 +41,6 @@ import com.sensorsdata.anlytics.data.adapter.DbAdapter;
 import com.sensorsdata.anlytics.data.adapter.DbParams;
 import com.sensorsdata.anlytics.data.persistent.PersistentLoader;
 import com.sensorsdata.anlytics.data.persistent.PersistentSuperProperties;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeepLinkCallback;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
 import com.sensorsdata.anlytics.internal.beans.EventType;
 import com.sensorsdata.anlytics.plugin.property.SAPropertyPlugin;
 import com.sensorsdata.anlytics.plugin.property.impl.SAPresetPropertyPlugin;
@@ -1277,18 +1275,6 @@ public class SensorsDataAPI extends AbstractSensorsDataAPI {
         }
     }
 
-    @Override
-    @Deprecated()
-    public void setDeepLinkCallback(SensorsDataDeepLinkCallback deepLinkCallback) {
-        SAModuleManager.getInstance().invokeModuleFunction(Modules.Advert.MODULE_NAME,
-                Modules.Advert.METHOD_SET_DEEPLINK_CALLBACK, deepLinkCallback);
-    }
-
-    @Override
-    public void setDeepLinkCompletion(SensorsDataDeferredDeepLinkCallback callback) {
-        SAModuleManager.getInstance().invokeModuleFunction(Modules.Advert.MODULE_NAME,
-                Modules.Advert.METHOD_SET_DEEPLINK_COMPLETION, callback);
-    }
 
     @Override
     public void stopTrackThread() {

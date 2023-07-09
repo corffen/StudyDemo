@@ -18,7 +18,6 @@
 package com.sensorsdata.anlytics;
 
 import com.sensorsdata.anlytics.core.business.exposure.SAExposureConfig;
-import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
 import com.sensorsdata.anlytics.encrypt.IPersistentSecretKey;
 import com.sensorsdata.anlytics.encrypt.SAEncryptListener;
 import com.sensorsdata.anlytics.plugin.encrypt.StorePlugin;
@@ -224,10 +223,6 @@ abstract class AbstractSAConfigOptions {
      */
     String mAnonymousId;
 
-    /**
-     * Deeplink Callback
-     */
-    SensorsDataDeferredDeepLinkCallback mDeeplinkCallback;
 
     /**
      * 曝光配置
@@ -443,10 +438,6 @@ abstract class AbstractSAConfigOptions {
 
     public boolean isDisableDebugAssistant() {
         return mDisableDebugAssistant;
-    }
-
-    public SensorsDataDeferredDeepLinkCallback getDeeplinkCallback() {
-        return mDeeplinkCallback;
     }
 
     public Map<String, String> getLimitKeys() {
