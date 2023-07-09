@@ -38,10 +38,8 @@ import com.sensorsdata.anlytics.data.adapter.DbParams;
 import com.sensorsdata.anlytics.data.persistent.PersistentLoader;
 import com.sensorsdata.anlytics.exceptions.SensorsDataExceptionHandler;
 import com.sensorsdata.anlytics.internal.beans.InternalConfigOptions;
-import com.sensorsdata.anlytics.jsbridge.H5Helper;
 import com.sensorsdata.anlytics.listener.SAEventListener;
 import com.sensorsdata.anlytics.listener.SAFunctionListener;
-import com.sensorsdata.anlytics.listener.SAJSListener;
 import com.sensorsdata.anlytics.monitor.SensorsDataLifecycleMonitorManager;
 import com.sensorsdata.anlytics.monitor.TrackMonitor;
 import com.sensorsdata.anlytics.remote.SensorsDataRemoteManager;
@@ -176,23 +174,6 @@ abstract class AbstractSensorsDataAPI implements ISensorsDataAPI {
         mSAContextManager.removeEventListener(eventListener);
     }
 
-    /**
-     * 监听 JS 消息
-     *
-     * @param listener JS 监听
-     */
-    public void addSAJSListener(SAJSListener listener) {
-        H5Helper.addSAJSListener(listener);
-    }
-
-    /**
-     * 移除 JS 消息
-     *
-     * @param listener JS 监听
-     */
-    public void removeSAJSListener(SAJSListener listener) {
-        H5Helper.removeSAJSListener(listener);
-    }
 
     /**
      * SDK 函数回调监听

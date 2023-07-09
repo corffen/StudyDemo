@@ -30,7 +30,6 @@ import com.sensorsdata.anlytics.deeplink.SensorsDataDeferredDeepLinkCallback;
 import com.sensorsdata.anlytics.internal.beans.InternalConfigOptions;
 import com.sensorsdata.anlytics.listener.SAEventListener;
 import com.sensorsdata.anlytics.listener.SAFunctionListener;
-import com.sensorsdata.anlytics.listener.SAJSListener;
 import com.sensorsdata.anlytics.plugin.property.PropertyPluginManager;
 import com.sensorsdata.anlytics.plugin.property.SAPropertyPlugin;
 import com.sensorsdata.anlytics.remote.BaseSensorsDataSDKRemoteManager;
@@ -760,11 +759,6 @@ public class SensorsDataAPIEmptyImplementation extends SensorsDataAPI {
 
     @Override
     public void removeFunctionListener(final SAFunctionListener functionListener) {
-
-    }
-
-    @Override
-    public void addSAJSListener(SAJSListener listener) {
 
     }
 
